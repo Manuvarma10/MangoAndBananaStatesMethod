@@ -3,24 +3,24 @@ import {Component} from 'react'
 import './index.css'
 
 class FruitsCounter extends Component {
-  state = {count: 0}
+  state = {mango: 0,banana:0}
 
   OnMango = () => {
-    this.setState(prevState => ({count: prevState.count + 1}))
+    this.setState(prevState => ({mango: prevState.mango + 1}))
   }
 
   onBanana = () => {
-    this.setState(prevState => ({count: prevState.count + 1}))
+    this.setState(prevState => ({banana: prevState.banana + 1}))
   }
 
   render() {
-    const {count} = this.state
+    const {mango,banana} = this.state
     return (
       <div className="container">
         <div className="sub-container">
           <h1 className="heading">
-            Bob ate <span className="countStyle">{count}</span> mangoes{' '}
-            <span className="countStyle">{count}</span> bananas
+            Bob ate <span className="countStyle">{mango}</span> mangoes{' '}
+            <span className="countStyle">{banana}</span> bananas
           </h1>
           <div className="image-container">
             <div className="content">
